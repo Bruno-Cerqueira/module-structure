@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { ChatModule } from './chat/chat.module';
+import { PhChatServiceModule } from './ph-chat-service.module';
 
 @Injectable({
-  providedIn: ChatModule
+  providedIn: PhChatServiceModule
 })
 export class PhChatService  {
 
