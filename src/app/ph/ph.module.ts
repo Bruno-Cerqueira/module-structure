@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { PhRoutingModule } from './ph-routing.module';
 import { PhComponent } from './ph.component';
+import { ChatModule } from '../chat/chat.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { PhComponent } from './ph.component';
   ],
   imports: [
     CommonModule,
-    PhRoutingModule
+    PhRoutingModule,
+    ChatModule
   ]
 })
 export class PhModule { }
