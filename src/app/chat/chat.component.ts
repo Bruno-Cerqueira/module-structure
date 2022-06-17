@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ChatService } from '../chat-service';
 import { PhChatService } from '../ph-chat-service/ph-chat.service';
-
 
 @Component({
   selector: 'app-chat',
@@ -9,12 +9,13 @@ import { PhChatService } from '../ph-chat-service/ph-chat.service';
 })
 export class ChatComponent implements OnInit {
 
-  constructor(private phChatService: PhChatService) { }
+  constructor(private chatService: ChatService) { }
 
   ngOnInit(): void {
+    this.chatService.sub.subscribe(console.log)
   }
 
   call(){
-    this.phChatService.call()
+    this.chatService.call()
   }
 }
